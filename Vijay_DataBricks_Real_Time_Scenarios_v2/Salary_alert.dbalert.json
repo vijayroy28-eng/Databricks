@@ -1,0 +1,25 @@
+{
+  "custom_summary": "Hi, High Slary",
+  "evaluation": {
+    "source": {
+      "name": "Total_Salary",
+      "display": "Total_Salary",
+      "aggregation": "AGGREGATION_UNSPECIFIED"
+    },
+    "comparison_operator": "GREATER_THAN",
+    "threshold": {
+      "value": {
+        "double_value": 3000.0
+      }
+    },
+    "notification": {
+      "notify_on_ok": true
+    }
+  },
+  "query_lines": [
+    "SELECT sum(Salary) as Total_Salary FROM real_time_catalog.source.my_table"
+  ],
+  "custom_description_lines": [
+    "Yo to Salry High {{ALERT_STATUS}}"
+  ]
+}
